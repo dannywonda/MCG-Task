@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Tag extends Model
+{
+    use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+    ];
+    
+    public function course(){
+        $this->belongsToMany(Course::class);
+    }
+
+    public function scopeSearch($query, $searchValue)
+    {
+        return $query->where('name', 'like', '%' . $searchValue . '%')
+            ->get()
+            ->toArray();
+    }
+}
