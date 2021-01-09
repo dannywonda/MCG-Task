@@ -1,3 +1,13 @@
+
+# Running the Application
+
+There are few step to follow to run the application.
+
+- Connecting the database to the application using `.ENV` file
+- Run `Php artisan migrate --seed` as examples are already in the seeder
+- Test the application
+
+
 # Suggestions
 
 This project would be a good fit for a demonstration purpose. But making process from here would require some big changes which include Authentication, Scalability for Search and Storing of media files.
@@ -10,3 +20,5 @@ The project currently has basic search functionality, but when building a system
 
 ## AWS for storing images and video.
 When it comes to storing large information like images and video, its always best to keep it away from the director where the files are stored. A good example would be AWS S3. Simple Storage Service (S3) is a good place to store your files. S3 can serve files directly to your users or application through HTTP. Your files are stored in something called buckets. File URLs will look something. This information can be stored in the database. Which can be accessed using a link. I have used youtube to display the video for the tutorial, Youtube is an example. The files are stored elsewhere but can be assessed using a link id which works with a URL to display.  
+
+Thank you for the oppuntunity.
